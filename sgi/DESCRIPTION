@@ -1,0 +1,23 @@
+Package: sgi
+Title: SGI: An algorithm for automatic subgroup identification
+Version: 0.0.0.9000
+Depends: R (>= 3.5.0), survival, ggplot2, ggdendro, ggrepel, data.table
+Authors@R: 
+    person(given = "Mustafa",
+           family = "Buyukozkan",
+           role = c("aut", "cre"),
+           email = "mub4004@med.cornell.edu",
+           comment = c(ORCID = "0000-0001-5027-5078"))
+Description: SGI (subgroup identification) toolbox provides an intuitive and powerful algorithm to automatically detect relevant subgroups of samples in large-scale omics datasets. 
+              It is based on hierarchical clustering trees in combination with a specifically designed association testing and visualization framework that can process a large number of 
+              clinical parameters and outcomes in an automated fashion. A multi-block extension allows for the simultaneous use of multiple omics datasets on the same samples.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to
+    pick a license
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
