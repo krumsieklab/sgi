@@ -52,23 +52,23 @@ For more detailed examples and functionalities of the package, we provide the fo
 tutorials:
 
   - [SGI Tutorial 1: Quickstart
-    guide](https://github.com/krumsieklab/sgi/blob/main/tutorials/01_intro_to_sgi.md#sgi-tutorial-1-quickstart-guide)
+    guide](https://github.com/krumsieklab/sgi/blob/main/tutorials/01_intro_to_sgi.md)
     provides a quick introduction to the functionality of the SGI
     package.
 
   - [SGI tutorial 2: Objects and
-    functions](https://github.com/krumsieklab/sgi/blob/main/tutorials/02_sgi_object_base.md#sgi-tutorial-2-objects-and-functions)
+    functions](https://github.com/krumsieklab/sgi/blob/main/tutorials/02_sgi_object_base.md)
     explains the functionality of SGI objects for result extraction and
     plotting.
 
   - [SGI tutorial 3: Detailed examples of plotting
-    functionality](https://github.com/krumsieklab/sgi/blob/main/tutorials/03_tree_manipulation.md#sgi-tutorial-3-detailed-examples-of-plotting-functionality)
+    functionality](https://github.com/krumsieklab/sgi/blob/main/tutorials/03_tree_manipulation.md)
     showcases various plotting scenarios for SGI results.
 
   - [SGI tutorial 4: Multi-omics
-    SGI](https://github.com/krumsieklab/sgi/blob/main/tutorials/04_multiomics_sgi.md#sgi-tutorial-4-multi-omics-sgi)
+    SGI](https://github.com/krumsieklab/sgi/blob/main/tutorials/04_multiomics_sgi.md)
     showcases the multi-omics capabilities of SGI
 
   - [SGI tutorial 5: SGI with user-defined statistical
-    tests](https://github.com/krumsieklab/SGI/blob/main/tutorials/05_arbitrary_classes.md#sgi-tutorial-5-sgi-with-user-defined-statistical-tests)
+    tests](https://github.com/krumsieklab/SGI/blob/main/tutorials/05_arbitrary_classes.md)
     explains how user-defined tests can be use in SGI
