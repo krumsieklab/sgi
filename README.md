@@ -71,4 +71,4 @@ tutorials:
 
   - [SGI tutorial 5: SGI with user-defined statistical
     tests](https://github.com/krumsieklab/SGI/blob/master/tutorials/05_arbitrary_classes.md)
-    explains how user-defined tests can be use in SGI
+    explains how user-defined tests can be used in SGI
