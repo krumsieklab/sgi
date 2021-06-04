@@ -1,7 +1,7 @@
 SGI tutorial 5: SGI with user-defined statistical tests
 ================
 
-This tutorial explains how user-defined tests can be use in SGI. The SGI
+This tutorial explains how user-defined tests can be used in SGI. The SGI
 algorithm accesses statistical test functions by the classes of the
 input variables. The user can control SGI’s behavior by overwriting the
 test function for a given variable class, and by setting custom variable
