@@ -87,7 +87,7 @@ plot_overview <- function(gg_tree,
   # # scale max height to 24, add some space above for ggrepel
   # # max will be 25
   # as$hc = fix_height(as$hc, hscale = h_tree*0.95)
-  # hc= as$hc
+  hc= as$hc
 
   # sgi tree
   # gg_tree = plot(as, relavance.tree.pruning = relavance.tree.pruning, padj_th = padj_th, overlay. = overlay.) + ylim(c(0, h_tree))
