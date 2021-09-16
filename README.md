@@ -13,7 +13,7 @@ simultaneous use of multiple omics datasets on the same samples.
 
 ## Reference
 
-Buyukozkan, et al. "SGI: Automatic clinical subgroup identification in omics datasets". *coming soon*
+Buyukozkan, et al. "SGI: Automatic clinical subgroup identification in omics datasets". *Bioinformatics*, 2021. [link to publication](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btab656/6371177)
 
 ## Installation instructions
 
