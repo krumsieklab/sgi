@@ -1,3 +1,4 @@
+# SGI: Automatic clinical subgroup identification in omics datasets
 
 ## Introduction
 
