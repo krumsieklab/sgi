@@ -125,7 +125,8 @@ plot_overview <- function(gg_tree,
   #   scale_y_continuous(expand = c(0,0), limits = c(0,1))
 
   if(add_xs){
-    legends$xdata =  gg_data$gtable$grobs[[5]]
+    # extract the legend object from gtable
+    legends$xdata = gtable::gtable_filter(gg_data$gtable, "legend")$grob[[1]]
     gg = gg +
       annotation_custom(grob = gg_data$gtable$grobs[[2]],
                         xmax = 100,
