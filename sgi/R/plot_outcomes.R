@@ -117,7 +117,8 @@ plot_outcomes <- function(sg, as, outcome_names = NULL, cluster_pairs = NULL, pa
     res = as.res[[ou]]
     lapply(sgs, function(sg){
       # filtering based on pth
-      if( res[paste0(cid1,"vs",cid2)==sg,]$padj > padj_th) return(NULL)
+      cpadj = res[paste0(cid1,"vs",cid2)==sg,]$padj
+      if (is.na(cpadj) | cpadj > padj_th) return(NULL)
 
       cpa = t(as$cluster_pairs[sg,])[,1]
       x = rep(NA, N)
