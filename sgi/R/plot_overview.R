@@ -100,6 +100,7 @@ plot_overview <- function(gg_tree,
   # max outcomes to be ploted
   if(add_ys){
     gg_phes = p_yheal(outcomes[hc$order, , drop=FALSE], nmax =  outcomes_nmax)
+    if (outcomes_nmax < ncol(outcomes)) warning("outcomes displayed in phenotype tiles is less than total #outcomes")
     n_tiles = length(gg_phes)
   }else{
     gg_phes = NULL
