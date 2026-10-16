@@ -290,9 +290,19 @@ fix_height <- function(hcx, hscale = 25){
 }
 
 get_legend_from_grobs <- function(grobs){
-  l = grobs[sapply(grobs, function(x) x$name == "guide-box")]
+  # ggplot2 >= 3.5 names legends "guide-box-right", "guide-box-bottom", etc.
+  # and fills unused positions with zeroGrobs, so match by prefix and drop empties
+  l = grobs[sapply(grobs, function(x) isTRUE(grepl("^guide-box", x$name)) && !inherits(x, "zeroGrob"))]
   if(length(l)<1) return(NULL)
   l
+}
+
+# extract the panel grob by name rather than position,
+# since grob order in ggplotGrob() differs across ggplot2 versions
+get_panel_grob <- function(gt){
+  idx = which(grepl("^panel", gt$layout$name))
+  if(length(idx) < 1) stop("could not find panel grob in ggplot gtable")
+  gt$grobs[[idx[1]]]
 }
 
 # add tiles underneath to tree.
@@ -307,7 +317,7 @@ p_add_ytiles <- function(ggt, tlist, ty = 25){
                        scale_y_continuous(expand = expansion(mult = c(1/50, 1/10)))
                    )
 
-  tree_grob =  obj$grobs[[5]]
+  tree_grob =  get_panel_grob(obj)
   legends = list()
   legends$tree_legend = get_legend_from_grobs(obj$grobs)[[1]]
 
@@ -323,7 +333,7 @@ p_add_ytiles <- function(ggt, tlist, ty = 25){
     bobj =  ggplotGrob(tlist[[i]]+
                        scale_x_continuous(expand = c(0, 0))+ #expansion(mult = c(0.02, 0.02)) )
                        scale_y_continuous(expand = c(0,0 )) )
-    bb = bobj$grobs[[5]]
+    bb = get_panel_grob(bobj)
     legends$ytiles[names(tlist)[i]] = get_legend_from_grobs(bobj$grobs)
     gg_ = gg_+ annotation_custom(bb, ymax =1-i, ymin = -i, xmin = 0, xmax = 100) +
       annotate("text", x=-1, y=0.5-i, label= names(tlist)[i],  hjust = 1)
